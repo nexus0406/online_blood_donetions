@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blood donation platform connecting donors with recipients">
+    <meta name="keywords" content="blood donation, donate blood, blood request, save lives">
+    <title>{% block title %}{% endblock %} | Blood Donation Network</title><title>Request Blood</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='request.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <h1>Request for Blood</h1>
+    
+    <form method="POST">
+        Name: <input type="text" name="name" required><br>
+        Blood Group: <input type="text" name="blood_group" required><br>
+        Email: <input type="email" name="email" required><br>
+        Phone: <input type="text" name="phone" required><br>
+        City: <input type="text" name="city" required><br>
+        <button type="submit">Submit Request</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blood donation platform connecting donors with recipients">
+    <meta name="keywords" content="blood donation, donate blood, blood request, save lives">
+    <title>{% block title %}{% endblock %} | Blood Donation Network</title>
+
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    
+    <h2>Donors</h2>
+    <ul>
+    {% for donor in donors %}
+        <li>{{ donor[1] }} - {{ donor[2] }} - {{ donor[3] }} - {{ donor[4] }} - {{ donor[5] }}</li>
+    {% endfor %}
+    </ul>
+
+    <h2>Requests</h2>
+    <ul>
+    {% for req in requests %}
+        <li>{{ req[1] }} - {{ req[2] }} - {{ req[3] }} - {{ req[4] }} - {{ req[5] }}</li>
+    {% endfor %}
+    </ul>
+
+    <a href="/">Back to Home</a>
+</body>
+</html>

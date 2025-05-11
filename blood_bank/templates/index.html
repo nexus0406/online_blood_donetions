@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="jprO-428fBTyE726Y-mTvTt8n4KAYL1lQGxbV_4vPSk"/>
+    <title>LifeSaver - Online Blood Donation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                <span>LifeSaver</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <li><a href="/request">Request</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+                <div class="auth-buttons">
+                    <a href="/admin" class="btn login-btn">Admin</a>
+                    <a href="/register" class="btn register-btn">Register</a>
+                </div>
+
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Donate Blood, Save Lives</h1>
+            <p>Join our community of heroes who give the gift of life. Every donation can save up to 3 lives.</p>
+            <div class="hero-buttons">
+               <a href="/register" class="btn primary-btn">Become a Donor</a>
+                <a href="/request" class="btn secondary-btn">Request Blood</a>
+             </div>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='blood.png') }}" alt="Blood">
+
+        </div>
+    </section>
+
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="about">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <i class="fas fa-user-edit"></i>
+                <h3>Register</h3>
+                <p>Create your donor profile and complete the health questionnaire.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <i class="fas fa-search-location"></i>
+                <h3><a href="https://www.google.com/maps/search/blood+donation+center/" target="_blank">Find a Center</a></h3>
+                <p>Locate the nearest blood donation center or mobile drive.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Schedule</h3>
+                <p>Book an appointment at your convenience.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <i class="fas fa-heartbeat"></i>
+                <h3>Donate</h3>
+                <p>Visit the center and make your life-saving donation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blood Types Info -->
+    <section class="blood-types">
+        <h2>Blood Types Compatibility</h2>
+        <div class="compatibility-chart">
+            <div class="blood-type-card" data-type="A+">
+                <h3>A+</h3>
+                <p>Can donate to: A+, AB+</p>
+                <p>Can receive from: A+, A-, O+, O-</p>
+            </div>
+            <div class="blood-type-card" data-type="A-">
+                <h3>A-</h3>
+                <p>Can donate to: A+, A-, AB+, AB-</p>
+                <p>Can receive from: A-, O-</p>
+            </div>
+            <div class="blood-type-card" data-type="B+">
+                <h3>B+</h3>
+                <p>Can donate to: B+, AB+</p>
+                <p>Can receive from: B+, B-, O+, O-</p>
+            </div>
+            <div class="blood-type-card" data-type="B-">
+                <h3>B-</h3>
+                <p>Can donate to: B+, B-, AB+, AB-</p>
+                <p>Can receive from: B-, O-</p>
+            </div>
+            <div class="blood-type-card" data-type="AB+">
+                <h3>AB+</h3>
+                <p>Can donate to: AB+</p>
+                <p>Can receive from: All Types</p>
+            </div>
+            <div class="blood-type-card" data-type="AB-">
+                <h3>AB-</h3>
+                <p>Can donate to: AB+, AB-</p>
+                <p>Can receive from: A-, B-, AB-, O-</p>
+            </div>
+            <div class="blood-type-card" data-type="O+">
+                <h3>O+</h3>
+                <p>Can donate to: O+, A+, B+, AB+</p>
+                <p>Can receive from: O+, O-</p>
+            </div>
+            <div class="blood-type-card" data-type="O-">
+                <h3>O-</h3>
+                <p>Can donate to: All Types</p>
+                <p>Can receive from: O-</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Donors Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Donating blood through LifeSaver was so convenient. The staff was professional and the process was smooth. Knowing my donation helped save lives is incredibly rewarding.</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J.">
+                    <div>
+                        <h4>Sarah J.</h4>
+                        <p>Regular Donor</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>When my father needed blood urgently, LifeSaver connected us with donors quickly. The response was amazing and we got the required units in time. Forever grateful!</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T.">
+                    <div>
+                        <h4>Michael T.</h4>
+                        <p>Recipient's Family</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>As a first-time donor, I was nervous but the team made me feel comfortable. The appointment scheduling was easy and I'll definitely donate again.</p>
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K.">
+                    <div>
+                        <h4>Priya K.</h4>
+                        <p>First-time Donor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">Who can donate blood?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Most people in good health, at least 17 years old (16 with parental consent in some states), and weighing at least 110 pounds can donate blood. There are some additional eligibility requirements related to health, travel, and medications that will be reviewed before donation.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How often can I donate blood?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>You can donate whole blood every 56 days (8 weeks). Platelet donations can be made more frequently - up to 24 times per year - with at least 7 days between donations.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Is blood donation safe?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Yes, donating blood is safe. New, sterile disposable equipment is used for each donor, so there's no risk of contracting a bloodborne infection by donating blood.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">How long does the donation process take?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>The entire process takes about an hour. The actual donation of a pint of whole blood unit takes 8-10 minutes. The process includes registration, a brief medical screening, donation, and refreshments.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">What should I do before donating?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Get a good night's sleep, eat a healthy meal before donating, drink extra fluids (avoid caffeine), and bring your donor card, driver's license, or other form of ID.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>Have questions or need assistance? Reach out to our team.</p>
+                
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>1-800-LIFESAVER (543-372837)</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>support@lifesaver.org</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Headquarters</h4>
+                        <p>1234 Health Plaza, Suite 500<br>San Francisco, CA 94108</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="contactName">Your Name</label>
+                        <input type="text" id="contactName" name="contactName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email</label>
+                        <input type="email" id="contactEmail" name="contactEmail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactSubject">Subject</label>
+                        <input type="text" id="contactSubject" name="contactSubject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contactMessage">Message</label>
+                        <textarea id="contactMessage" name="contactMessage" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>LifeSaver</h3>
+                <p>Connecting donors with those in need to save lives through blood donation.</p>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+ 
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Eligibility Criteria</a></li>
+                    <li><a href="#">Donation Process</a></li>
+                    <li><a href="#">Blood Types</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<!-- Place in your root directory -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://yourwebsite.com/</loc>
+    <lastmod>2023-08-15</lastmod>
+  </url>
+  <url>
+    <loc>https://yourwebsite.com/register</loc>
+  </url>
+</urlset>

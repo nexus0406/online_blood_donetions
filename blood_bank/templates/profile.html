@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blood donation platform connecting donors with recipients">
+    <meta name="keywords" content="blood donation, donate blood, blood request, save lives">
+    <title>{% block title %}{% endblock %} | Blood Donation Network</title><title>Donor Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='profile.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <h1>Welcome, {{ donor[1] }}!</h1>
+    <p><strong>Blood Group:</strong> {{ donor[2] }}</p>
+    <p><strong>Email:</strong> {{ donor[3] }}</p>
+    <p><strong>Phone:</strong> {{ donor[4] }}</p>
+    <p><strong>City:</strong> {{ donor[5] }}</p>
+    <a href="/">Back to Home</a>
+</body>
+</html>
